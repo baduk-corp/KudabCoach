@@ -5,11 +5,11 @@ Sistema de coach para uso do Çeu Creison
 
 ## Definir e documentar as ferramentas
   * Ambiente de Desenvolvimento: Visual Studio Code.
-  * Linguagem e Framework: PHP + Laravel
-  * Banco de Dados: Postgres 11
+  * Linguagem e Framework: PHP 7.2.15 + Laravel 5.8.3
+  * Banco de Dados: Postgres - 11.2
   * Versionamento: GIT + GITHUB
   * Requisito de Gestão de Projeto: User History Card (Usando as issue do github)
-  * FrontEnd: Bulma.CSS
+  * FrontEnd: Bulma.CSS - 0.7.4
   * Servidor em nuvem na DigitalOcean basedo no Ubuntu Server.  
 
 ## Definir a forma de documentação do Projeto
