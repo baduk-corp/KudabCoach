@@ -3,11 +3,13 @@
 Sistema de coach para uso do Çeu Creison
 
 Para o desenvolvimento local:
-`git clone https://github.com/baduk-corp/KudabCoach.git
+```
+git clone https://github.com/baduk-corp/KudabCoach.git
 cp .env.example .env
 composer install
 php artisan key:generate
-php artisan serve`
+php artisan serve
+```
 
 ## Definir e documentar as ferramentas
   * Ambiente de Desenvolvimento: Visual Studio Code.
