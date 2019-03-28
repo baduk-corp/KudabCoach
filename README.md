@@ -11,6 +11,10 @@ php artisan key:generate
 php artisan serve
 ```
 
+## Issues:
+Caso o cliente necessite a criação de uma issue, para não poluir nosso ambiente de desenvolvimento, favor enviar um email para baduk.kudab@gmail.com.
+Assim nosso SLM irá verificar a issue e tomar as devidas providências.
+
 ## Definir e documentar as ferramentas
   * Ambiente de Desenvolvimento: Visual Studio Code.
   * Linguagem e Framework: PHP 7.2.15 + Laravel 5.8.3
