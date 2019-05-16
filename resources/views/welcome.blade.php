@@ -92,7 +92,7 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        <a href="{{ url('/register') }}">Registrar</a>
                     @endif
                 </div>
             @endif
@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://github.com/baduk-corp/KudabCoach/wiki">Documentation</a>
+                    <a href="https://github.com/baduk-corp/KudabCoach/wiki">Documentação</a>
                     <a href="https://github.com/baduk-corp/KudabCoach/">GitHub</a>
                 </div>
             </div>

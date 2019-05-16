@@ -6,19 +6,19 @@
         <div class="column is-5">
             <div class="card">
                 <header class="card-header">
-                    <p class="card-header-title">{{ __('Verify Your Email Address') }}</p>
+                    <p class="card-header-title">{{ __('Verifique seu endereço de e-mail') }}</p>
                 </header>
 
                 <div class="card-content">
                     @if (session('resent'))
                         <div class="notification is-success">
                             <button class="delete"></button>
-                            {{ __('A fresh verification link has been sent to your email address.') }}
+                            {{ __('Um novo código de verificação foi enviado ao seu e-mail') }}
                         </div>
                     @endif
 
-                    {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }}, <a href="{{ route('verification.resend') }}">{{ __('click here to request another') }}</a>.
+                    {{ __('Antes de continuar verifique o código de verificação enviado ao seu e-mail') }}
+                    {{ __('Se você não recebeu o e-mail: ') }}, <a href="{{ route('verification.resend') }}">{{ __('clique aqui para enviar novamente') }}</a>.
                 </div>
             </div>
         </div>
