@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')
     ->middleware('auth')
     ->name('home');
 
+Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
