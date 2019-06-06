@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ServicesController extends Controller
+class ContactUsController extends Controller
 {
     //
     /**
@@ -24,6 +24,6 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return view('services');
+        return view('contact');
     }
 }

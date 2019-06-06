@@ -67,7 +67,7 @@
 
                         <div class="field is-horizontal">
                             <div class="field-label">
-                                <label class="label">Senha>: </label>
+                                <label class="label">Senha: </label>
                             </div>
 
                             <div class="field-body">

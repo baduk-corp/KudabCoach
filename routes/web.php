@@ -33,9 +33,15 @@ Route::get('/products', 'productsController@index')
     ->middleware('auth')
     ->name('products');
 
+Route::get('/services', 'ServicesController@index')
+    ->middleware('auth')
+    ->name('services');
+
+    Route::get('/contact', 'ContactUsController@index')
+    ->name('contact');
+
 
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
-
 

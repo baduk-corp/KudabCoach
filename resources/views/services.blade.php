@@ -8,7 +8,7 @@
                 <nav class="card">
                     <header class="card-header">
                         <p class="card-header-title">
-                            Produtos
+                            Serviços
                         </p>
                     </header>
 
@@ -20,5 +20,4 @@
         </div>
     </div>
 </section>
-
 @endsection
