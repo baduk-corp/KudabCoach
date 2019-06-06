@@ -43,7 +43,7 @@
                                             <span class="navbar-item">
                                                 <a class="button is-white is-outlined" href="https://github.com/baduk-corp/KudabCoach/">
                                                     <span class="icon">
-                                                        <i class="fa fa-github"></i>
+                                                        <i class="fab fa-github"></i>
                                                     </span>
                                                     <span title="Hello from the other side">View Source</span>
                                                 </a>

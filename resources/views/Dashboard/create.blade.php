@@ -1,28 +1,42 @@
 @extends('layouts.appBulma')
 
 @section('content')
+<div class="card-content">
+    <form class="login-form" method="POST" action="{{ route('dashboard.create') }}">
+        {{ csrf_field() }}
+        <div class="field is-horizontal">
 
-<div class="container-fluid">
-    <div class="row">
-        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-            <h1>Create Post</h1>
-            <div class="col-md-4">
-                <form method="post" action="{{ route('dashboard.create') }}">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <label for="name">Title</label>
-                        <input type="text" class="form-control" id="id_title" name="title"
-                               aria-describedby="title" placeholder="Enter title">
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea class="form-control" id="id_description" rows="3" name="description" placeholder="Description"></textarea>
-                    </div>
-                    <button type="submit" class="button primary">Create post</button>
-                </form>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control">
+                        <input class="input" id="id_titulo" type="text" name="titulo"
+                        required autofocus placeholder="Digite o titulo do seu post">
+                    </p>
+                </div>
             </div>
-        </main>
-    </div>
-</div>
+        </div>
 
+        <div class="field is-horizontal">
+            <div class="field-body">
+                <div class="field">
+                    <p class="control">
+                        <textarea class="textarea" id="id_descricao" name="descricao"
+                            placeholder="Digite o texto do seu post" rows="10">
+                        </textarea>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="field-body">
+            <div class="field is-grouped">
+                <div class="control">
+                    <button type="submit" class="button is-info">Enviar</button>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+</div>
 @endsection

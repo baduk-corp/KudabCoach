@@ -101,7 +101,7 @@
 
                         <div class="field is-horizontal">
                             <div class="field">
-                                <a href="{{ url('/login/facebook') }}" class="btn btn-facebook" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+                                <a href="{{ url('/login/facebook') }}" class="btn btn-facebook" class="btn btn-facebook"><i class="fab fa-facebook"></i> Facebook</a>
                             </div>
                         </div>
                     </form>

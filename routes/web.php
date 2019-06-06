@@ -21,6 +21,9 @@ Route::get('/home', 'HomeController@index')
     ->middleware('auth')
     ->name('home');
 
+Route::get('/dashboard', 'DashboardController@index')
+    ->middleware('auth')
+    ->name('dashboard');
 Route::get('/dashboard/create', 'DashboardController@create')
     ->middleware('auth')
     ->name('dashboard.create');

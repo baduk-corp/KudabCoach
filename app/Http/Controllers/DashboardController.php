@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class DashboardController extends Controller
 {
@@ -23,7 +27,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+        $posts = DB::table('users')->leftjoin('posts', 'users.id', '=', 'posts.autor')->paginate(10);
+        return view('Dashboard/home', ['posts' => $posts]);
     }
 
     /**
@@ -49,7 +54,7 @@ class DashboardController extends Controller
             'descricao' => Input::get('descricao'),
             'autor' => Auth::user()->id
         ));
-        return redirect()->route('home')->with('success', 'Post has been successfully added!');
+        return redirect()->route('dashboard')->with('success', 'Post has been successfully added!');
     }
 
     /**
