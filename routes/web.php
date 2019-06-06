@@ -21,10 +21,21 @@ Route::get('/home', 'HomeController@index')
     ->middleware('auth')
     ->name('home');
 
+Route::get('/dashboard/create', 'DashboardController@create')
+    ->middleware('auth')
+    ->name('dashboard.create');
+Route::post('/dashboard/create', 'DashboardController@store')
+    ->middleware('auth')
+    ->name('dashboard.create');
+
+
 Route::get('/products', 'productsController@index')
     ->middleware('auth')
     ->name('products');
 
 
+
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
+
+

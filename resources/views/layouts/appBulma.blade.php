@@ -71,5 +71,6 @@
                 </nav>
             </div>
     @yield('content')
+    </section>
     </body>
 </html>
