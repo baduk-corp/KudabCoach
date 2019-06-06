@@ -21,7 +21,15 @@ Route::get('/home', 'HomeController@index')
     ->middleware('auth')
     ->name('home');
 
-Route::get('/products', 'ProductsController@index')
+Route::get('/dashboard/create', 'DashboardController@create')
+    ->middleware('auth')
+    ->name('dashboard.create');
+Route::post('/dashboard/create', 'DashboardController@store')
+    ->middleware('auth')
+    ->name('dashboard.create');
+
+
+Route::get('/products', 'productsController@index')
     ->middleware('auth')
     ->name('products');
 
@@ -32,8 +40,7 @@ Route::get('/services', 'ServicesController@index')
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
 
-Route::get('contact-us', 'ContactUsController@contactUs');
-Route::post('contact-us',[
-            'as'=>'contactus.store',
-            'uses'=>'ContactUsController@contactUsPost'
-            ]);
+Route::get('contact-us', 'ContactUSController@contactUS');
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+
+

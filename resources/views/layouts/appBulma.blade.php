@@ -72,5 +72,6 @@
             </div>
     </section>
     @yield('content')
+    </section>
     </body>
 </html>
