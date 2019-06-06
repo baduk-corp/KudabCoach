@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appBulma')
 
 @section('content')
 <div class="container">
