@@ -36,7 +36,7 @@
                                         <li><a href="{{ url('/services') }}">Serviços</a></li>
                                         <li><a href="{{ url('/products') }}">Produtos</a></li>
                                         <li><a href="">Agenda</a></li>
-                                        <li><a href="{{ url('/contact') }}">Contato</a></li>
+                                        <li><a href="{{ url('/contact-us') }}">Contato</a></li>
                                     </ul>
                                     @if (Route::has('login'))
                                         @if (Auth::check())
