@@ -46,4 +46,6 @@ Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallb
 Route::get('contact-us', 'ContactUSController@contactUS');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 
-
+Route::get('/vip', 'vipController@index')
+    ->middleware('auth')
+    ->name('Vip');

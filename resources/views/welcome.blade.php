@@ -43,7 +43,7 @@
                                             <span class="navbar-item">
                                                 <a class="button is-white is-outlined" href="https://github.com/baduk-corp/KudabCoach/">
                                                     <span class="icon">
-                                                        <i class="fa fa-github"></i>
+                                                        <i class="fab fa-github"></i>
                                                     </span>
                                                     <span title="Hello from the other side">View Source</span>
                                                 </a>
@@ -96,8 +96,8 @@
                     <div class="card-content">
                         <div class="content">
                             <h4 class="is-size-4">Área vip</h4>
-                            <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. 
-                            Integer enim neque volutpat ac tincidunt vitae semper quis. 
+                            <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec.
+                            Integer enim neque volutpat ac tincidunt vitae semper quis.
                             Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
                             <p><a class="button is-info is-rounded" href="#">Learn more</a></p>
                         </div>
@@ -113,7 +113,7 @@
                         <div class="content">
                             <h4 class="is-size-4">Agenda de treimentos</h4>
                             <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque.
-                            Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. 
+                            Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue.
                             Phasellus vestibulum lorem sed risus.</p>
                             <p><a class="button is-info is-rounded" href="#">Learn more</a></p>
                         </div>
@@ -128,7 +128,7 @@
                     <div class="card-content">
                         <div class="content">
                             <h4 class="is-size-4">Áudios Motivacionais</h4>
-                            <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla 
+                            <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla
                             pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
                             <p><a class="button is-info is-rounded" href="#">Learn more</a></p>
                         </div>
@@ -138,7 +138,7 @@
         </div>
         <div class="intro column is-8 is-offset-2">
             <h2 class="title">Çeu Creison - Kudab Coach</h2><br>
-            <p class="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a. 
+            <p class="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a.
             Neque egestas congue quisque egestas diam in arcu cursus.</p>
         </div>
     </section>

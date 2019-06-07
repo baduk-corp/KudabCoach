@@ -48,6 +48,21 @@
                                                     <span title="Hello from the other side">View Source</span>
                                                 </a>
                                             </span>
+
+                                            <span class="navbar-item">
+                                                <a class="button is-white is-outlined" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                                        <span class="icon">
+                                                            <i class="fas fa-sign-out-alt"></i>
+                                                        </span>
+                                                        <span title="Hello from the other side">Sair</span>
+                                                    </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                    style="display: none;">
+                                                    {{ csrf_field() }}
+                                                </form>
+                                            </span>
+
                                         @else
                                             <span class="navbar-item">
                                                 <a class="button is-white is-outlined" href="{{ url('/login') }}">
