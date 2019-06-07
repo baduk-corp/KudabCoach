@@ -23,24 +23,26 @@ Auth::routes();
 
 
 // Rotas para a Dashboard ---------------------
-Route::get('/dashboard', 'DashboardController@index')
-    ->middleware('auth')
-    ->name('dashboard');
-Route::get('/dashboard/create', 'DashboardController@create')
-    ->middleware('auth')
-    ->name('dashboard.create');
-Route::post('/dashboard/create', 'DashboardController@store')
-    ->middleware('auth')
-    ->name('dashboard.store');
-Route::get('/dashboard/edit/{id}', 'DashboardController@edit')
-    ->middleware('auth')
-    ->name('dashboard.edit');
-Route::post('/dashboard/edit/{id}', 'DashboardController@update')
-    ->middleware('auth')
-    ->name('dashboard.update');
-Route::get('/dashboard/delete/{id}', 'DashboardController@destroy')
-    ->middleware('auth')
-    ->name('dashboard.delete');
+Route::middleware(['auth','can:admin'])->group(function(){
+    Route::get('/dashboard', 'DashboardController@index')
+        ->middleware('auth')
+        ->name('dashboard');
+    Route::get('/dashboard/create', 'DashboardController@create')
+        ->middleware('auth')
+        ->name('dashboard.create');
+    Route::post('/dashboard/create', 'DashboardController@store')
+        ->middleware('auth')
+        ->name('dashboard.store');
+    Route::get('/dashboard/edit/{id}', 'DashboardController@edit')
+        ->middleware('auth')
+        ->name('dashboard.edit');
+    Route::post('/dashboard/edit/{id}', 'DashboardController@update')
+        ->middleware('auth')
+        ->name('dashboard.update');
+    Route::get('/dashboard/delete/{id}', 'DashboardController@destroy')
+        ->middleware('auth')
+        ->name('dashboard.delete');
+});
 
 // ---------------------------------------------
 
