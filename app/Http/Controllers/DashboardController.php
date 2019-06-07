@@ -76,7 +76,8 @@ class DashboardController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('dashboard/edit', ['post' => $post]);
     }
 
     /**
@@ -88,7 +89,11 @@ class DashboardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+        $post->titulo = $request->titulo;
+        $post->descricao = $request->descricao;
+        $post->save();
+        return redirect()->route('dashboard')->with('success', 'Post has been updated successfully!');
     }
 
     /**
@@ -99,6 +104,8 @@ class DashboardController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        return redirect()->route('dashboard')->with('success', 'Post has been deleted successfully!');
     }
 }

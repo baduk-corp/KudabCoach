@@ -32,11 +32,17 @@
                             <div class="navbar-end">
                                 <div class="tabs is-right">
                                     <ul>
-                                        <li class="is-active"><a>Home</a></li>
-                                        <li><a href="{{ url('/services') }}">Serviços</a></li>
-                                        <li><a href="{{ url('/products') }}">Produtos</a></li>
-                                        <li><a href="">Agenda</a></li>
-                                        <li><a href="{{ url('/contact-us') }}">Contato</a></li>
+                                        @if (Route::has('login'))
+                                            @if (Auth::check())
+                                                <li><a href="{{ url('/vip') }}">Área VIP</a></li>
+                                            @else
+                                                <li class="is-active"><a>Home</a></li>
+                                            @endif
+                                        @endif
+                                            <li><a href="{{ url('/services') }}">Serviços</a></li>
+                                            <li><a href="{{ url('/products') }}">Produtos</a></li>
+                                            <li><a href="">Agenda</a></li>
+                                            <li><a href="{{ url('/contact-us') }}">Contato</a></li>
                                     </ul>
                                     @if (Route::has('login'))
                                         @if (Auth::check())
@@ -47,6 +53,20 @@
                                                     </span>
                                                     <span title="Hello from the other side">View Source</span>
                                                 </a>
+                                            </span>
+
+                                            <span class="navbar-item">
+                                                <a class="button is-white is-outlined" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                                        <span class="icon">
+                                                            <i class="fas fa-sign-out-alt"></i>
+                                                        </span>
+                                                        <span title="Hello from the other side">Sair</span>
+                                                    </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                    style="display: none;">
+                                                    {{ csrf_field() }}
+                                                </form>
                                             </span>
                                         @else
                                             <span class="navbar-item">

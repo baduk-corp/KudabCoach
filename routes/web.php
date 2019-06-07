@@ -17,10 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')
-    ->middleware('auth')
-    ->name('home');
+// Route::get('/home', 'HomeController@index')
+//     ->middleware('auth')
+//     ->name('home');
 
+
+// Rotas para a Dashboard ---------------------
 Route::get('/dashboard', 'DashboardController@index')
     ->middleware('auth')
     ->name('dashboard');
@@ -29,7 +31,28 @@ Route::get('/dashboard/create', 'DashboardController@create')
     ->name('dashboard.create');
 Route::post('/dashboard/create', 'DashboardController@store')
     ->middleware('auth')
-    ->name('dashboard.create');
+    ->name('dashboard.store');
+Route::get('/dashboard/edit/{id}', 'DashboardController@edit')
+    ->middleware('auth')
+    ->name('dashboard.edit');
+Route::post('/dashboard/edit/{id}', 'DashboardController@update')
+    ->middleware('auth')
+    ->name('dashboard.update');
+Route::get('/dashboard/delete/{id}', 'DashboardController@destroy')
+    ->middleware('auth')
+    ->name('dashboard.delete');
+
+// ---------------------------------------------
+
+// Rotas para a área vip ----------------------------
+Route::get('/vip', 'vipController@index')
+    ->middleware('auth')
+    ->name('vip');
+Route::get('/vip/read/{id}', 'vipController@getFullPost')
+    ->middleware('auth')
+    ->name('vip.read');
+
+// --------------------------------------------------
 
 
 Route::get('/products', 'productsController@index')
@@ -41,11 +64,8 @@ Route::get('/services', 'ServicesController@index')
     ->name('services');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
+Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('contact-us', 'ContactUSController@contactUS');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 
-Route::get('/vip', 'vipController@index')
-    ->middleware('auth')
-    ->name('Vip');

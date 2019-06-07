@@ -32,7 +32,13 @@
                             <div class="navbar-end">
                                 <div class="tabs is-right">
                                     <ul>
-                                        <li class="is-active"><a>Home</a></li>
+                                        @if (Route::has('login'))
+                                            @if (Auth::check())
+                                                <li><a href="{{ url('/vip') }}">Área VIP</a></li>
+                                            @else
+                                                <li><a>Home</a></li>
+                                            @endif
+                                        @endif
                                         <li><a href="{{ url('/services') }}">Serviços</a></li>
                                         <li><a href="{{ url('/products') }}">Produtos</a></li>
                                         <li><a href="">Agenda</a></li>
