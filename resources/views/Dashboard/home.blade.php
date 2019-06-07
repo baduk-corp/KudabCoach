@@ -102,7 +102,7 @@
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="{{ url('dashboard.create') }}" class="card-footer-item">Criar novo</a>
+                            <a href="{{ route('dashboard.create') }}" class="card-footer-item">Criar novo</a>
                         </footer>
                     </div>
                 </section>

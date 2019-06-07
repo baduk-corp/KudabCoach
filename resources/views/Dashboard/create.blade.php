@@ -20,8 +20,10 @@
             <div class="field-body">
                 <div class="field">
                     <p class="control">
-                        <textarea class="textarea" id="id_descricao" name="descricao"
-                            placeholder="Digite o texto do seu post" rows="10"></textarea>
+                        {{-- <textarea class="textarea" id="id_descricao" name="descricao"
+                            placeholder="Digite o texto do seu post" rows="10"></textarea> --}}
+                        <div id="editor-container" style="height: 130px;"></div>
+                        <input name="descricao" type="hidden">
                     </p>
                 </div>
             </div>
@@ -38,4 +40,21 @@
 
     </form>
 </div>
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+    var quill = new Quill('#editor-container', {
+            placeholder: 'Digite o post para seu blog',
+            theme: 'snow'
+            });
+        var form = document.querySelector('form');
+        form.onsubmit = function() {
+            // Populate hidden form on submit
+            var descricao = document.querySelector('input[name=descricao]');
+            descricao.value = quill.getContents();
+            console.log("ATIVEI")
+
+            return false;
+        };
+</script>
 @endsection
