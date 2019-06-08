@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Mail\PostMail;
+use App\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -55,6 +58,9 @@ class DashboardController extends Controller
             'descricao' => Input::get('descricao'),
             'autor' => Auth::user()->id
         ));
+
+        Mail::to(User::All()->pluck('email'))->send(new PostMail($post));
+
         return redirect()->route('dashboard')->with('success', 'Post has been successfully added!');
     }
 
