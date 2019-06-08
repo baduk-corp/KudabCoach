@@ -54,11 +54,13 @@ Route::get('/vip/read/{id}', 'vipController@getFullPost')
 
 // --------------------------------------------------
 
-
+// Rotas Produtos----------------
 Route::get('/products', 'productsController@index')
     ->middleware('auth')
     ->name('products');
+//---------
 
+//Rotas Servicos----------------
 Route::get('/services', 'ServicesController@index')
     ->middleware('auth')
     ->name('services');
@@ -66,6 +68,9 @@ Route::get('/services', 'ServicesController@index')
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
+//Rotas Contact Us-----------
 Route::get('contact-us', 'ContactUSController@contactUS');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+//----------------
 
+Route::resource('/consultations','ConsultationController');

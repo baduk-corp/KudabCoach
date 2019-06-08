@@ -40,4 +40,10 @@ class User extends Authenticatable
     public function identities() {
         return $this->hasMany('App\SocialIdentity');
      }
+
+     public function consultations()
+     {
+         return $this->hasMany('App\Model\Consultation');
+     }
+     
 }
