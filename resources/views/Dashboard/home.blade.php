@@ -79,24 +79,24 @@
                             <div class="content">
                                 <table class="table is-fullwidth is-striped">
                                     <tbody>
-                                        @if($posts->isNotEmpty())
-                                            @foreach($posts as $post)
+
+                                            @forelse($posts as $post)
                                                 <tr>
                                                     <th>{{ $loop->iteration }}</th>
                                                     <td>{{ $post->name }}</td>
+                                                    <td>{{ $post->getAutor->name }}
                                                     <td><a href="{{ route('vip.read', ['id' => $post->id]) }}">{{ $post->titulo }}</a></td>
                                                     <td>{{ Carbon\Carbon::parse($post->created_at)->format('d/m/Y') }}</td>
                                                     <td>
                                                         <a class="button is-small is-primary" href="{{ route('dashboard.edit', ['id' => $post->id]) }}">Editar</a>
                                                         <a class="button is-small is-danger" href="{{ route('dashboard.delete', ['id' => $post->id]) }}">Excluir</a>
-                                                    </td> 
+                                                    </td>
                                                 </tr>
-                                            @endforeach
-                                        @else
+                                        @empty
                                             <tr>
                                                 <td><p>Nenhum post criado</p></td>
                                             </tr>
-                                        @endif
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>

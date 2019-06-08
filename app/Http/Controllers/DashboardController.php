@@ -18,6 +18,7 @@ class DashboardController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
     }
 
     /**
@@ -27,7 +28,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $posts = DB::table('users')->leftjoin('posts', 'users.id', '=', 'posts.autor')->paginate(10);
+        $posts = Post::all();
         return view('Dashboard/home', ['posts' => $posts]);
     }
 
