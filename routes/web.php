@@ -57,7 +57,7 @@ Route::get('/vip/read/{id}', 'vipController@getFullPost')
 // --------------------------------------------------
 
 // Rotas Produtos----------------
-Route::get('/products', 'productsController@index')
+Route::get('/products', 'ProductsController@index')
     ->middleware('auth')
     ->name('products');
 //---------
