@@ -41,6 +41,11 @@ class User extends Authenticatable
         return $this->hasMany('App\SocialIdentity');
      }
 
+     public function consultations()
+     {
+         return $this->hasMany('App\Model\Consultation');
+     }
+     
      public function posts()
      {
          return $this->hasMany('App\Post','autor');

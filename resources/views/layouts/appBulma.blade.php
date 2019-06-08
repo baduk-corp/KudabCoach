@@ -36,6 +36,7 @@
                                         @if (Route::has('login'))
                                             @if (Auth::check())
                                                 <li><a href="{{ url('/vip') }}">Área VIP</a></li>
+                                                <li><a href="{{ route('consultations.index') }}" class="nav-link">Minhas Consultas</a></li>
                                             @else
                                                 <li><a>Home</a></li>
                                             @endif
