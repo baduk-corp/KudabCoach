@@ -35,6 +35,7 @@
                                         @if (Route::has('login'))
                                             @if (Auth::check())
                                                 <li><a href="{{ url('/vip') }}">Área VIP</a></li>
+                                                <li><a href="{{ route('consultations.index') }}" class="nav-link">Minhas Consultas</a></li>
                                             @else
                                                 <li class="is-active"><a>Home</a></li>
                                             @endif
@@ -102,7 +103,7 @@
 </section>
 <div class="box cta">
     <p class="has-text-centered">
-        <span class="tag is-primary">Novo</span> Agora a Kudab Coach possui um sistema de áudios motivacionais: <a href="#">clique aqui</a>
+        <span class="tag is-primary">Novo</span> Agora a Kudab Coach possui um sistema de áudios motivacionais: <a href="{{ url('/products') }}">clique aqui</a>
     </p>
     </div>
     <section class="container">
@@ -115,10 +116,8 @@
                     <div class="card-content">
                         <div class="content">
                             <h4 class="is-size-4">Área vip</h4>
-                            <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec.
-                            Integer enim neque volutpat ac tincidunt vitae semper quis.
-                            Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                            <p><a class="button is-info is-rounded" href="#">Learn more</a></p>
+                            <p>Aqui voce pode consultar os post mais recentes de nosso Coach.</p>
+                            <p><a class="button is-info is-rounded" href="{{ url('/vip') }}">Veja mais</a></p>
                         </div>
                     </div>
                 </div>
@@ -131,10 +130,8 @@
                     <div class="card-content">
                         <div class="content">
                             <h4 class="is-size-4">Agenda de treimentos</h4>
-                            <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque.
-                            Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue.
-                            Phasellus vestibulum lorem sed risus.</p>
-                            <p><a class="button is-info is-rounded" href="#">Learn more</a></p>
+                            <p>Aqui voce pode agendar e consultar seus treinamentos.</p>
+                            <p><a class="button is-info is-rounded" href="{{ route('consultations.index') }}">Veja Mais</a></p>
                         </div>
                     </div>
                 </div>
@@ -147,9 +144,8 @@
                     <div class="card-content">
                         <div class="content">
                             <h4 class="is-size-4">Áudios Motivacionais</h4>
-                            <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla
-                            pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                            <p><a class="button is-info is-rounded" href="#">Learn more</a></p>
+                            <p>Escutes nossos mais novos audios motivacionais aqui no Kudab Coach.</p>
+                            <p><a class="button is-info is-rounded" href="{{ url('/products') }}">Veja Mais</a></p>
                         </div>
                     </div>
                 </div>
@@ -157,8 +153,7 @@
         </div>
         <div class="intro column is-8 is-offset-2">
             <h2 class="title">Çeu Creison - Kudab Coach</h2><br>
-            <p class="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a.
-            Neque egestas congue quisque egestas diam in arcu cursus.</p>
+            <p class="subtitle">O melhor Coach Motivacional para você e sua empresa!</p>
         </div>
     </section>
     </body>

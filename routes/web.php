@@ -71,8 +71,8 @@ Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 //Rotas Contact Us-----------
-Route::get('contact-us', 'ContactUSController@contactUS');
-Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+Route::get('contact-us', 'ContactUsController@contactUs');
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUsController@contactUsPost']);
 //----------------
 
 Route::resource('/consultations','ConsultationController');
