@@ -15,7 +15,7 @@ class vipController extends Controller
 
     public function index()
     {
-        $posts = Post::all()->paginate(7);
+        $posts = DB::table('posts')->paginate(7);
         return view('vip/home', ['posts' => $posts]);
     }
 
