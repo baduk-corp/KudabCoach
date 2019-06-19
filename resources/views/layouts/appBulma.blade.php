@@ -38,7 +38,7 @@
                                                 <li><a href="{{ url('/vip') }}">Área VIP</a></li>
                                                 <li><a href="{{ route('consultations.index') }}" class="nav-link">Minhas Consultas</a></li>
                                             @else
-                                                <li><a>Home</a></li>
+                                                <li><a href="{{ url('/') }}">Home</a></li>
                                             @endif
                                         @endif
                                         <li><a href="{{ url('/services') }}">Serviços</a></li>
