@@ -58,13 +58,11 @@ Route::get('/vip/read/{id}', 'vipController@getFullPost')
 
 // Rotas Produtos----------------
 Route::get('/products', 'ProductsController@index')
-    ->middleware('auth')
     ->name('products');
 //---------
 
 //Rotas Servicos----------------
 Route::get('/services', 'ServicesController@index')
-    ->middleware('auth')
     ->name('services');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
