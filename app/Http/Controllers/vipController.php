@@ -14,7 +14,7 @@ class vipController extends Controller
 
     public function index()
     {
-        $posts = DB::table('users')->leftjoin('posts', 'users.id', '=', 'posts.autor')->paginate(7); 
+        $posts = Post::all()->paginate(7);
         return view('vip/home', ['posts' => $posts]);
     }
 
